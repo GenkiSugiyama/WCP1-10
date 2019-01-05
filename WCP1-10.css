@@ -286,6 +286,14 @@ footer {
 }
 
 /* レスポンシブ対応 */
+/* タブレット画面より大きい場合はハンバーガーメニューを非表示 */
+@media screen and (min-width:768px) {
+	#nav-drawer {
+		display: none;
+	}
+}
+
+/* タブレット画面以下でハンバーガーメニュー表示 */
 @media screen and (max-width:767px) {
 	/* header要素 */
 	header {
@@ -299,10 +307,36 @@ footer {
 
 	}
 	.headerlogo {
+		float: left;
 		height: 50px;
 	}
 	nav {
 		display: none;
+	}
+	#nav-drawer {
+		float: right;
+		height: 50px;
+		width:100px;
+	}
+
+	/* メニューアイコンの箱を作成 */
+	#nav-open {
+		display: inline-block;
+		width: 42px;
+		height: 42px;
+		border:1px solid #fff;
+		margin-top: 5px;
+	}
+
+	/* ハンバーガーメニューアイコンをcssだけで表示*/
+	.hum-menu {
+		height: 6px;
+		width: 30px;
+		border-radius: 3px;
+		background: #fff;
+		cursor: pointer; /*マウスポインタをお形を指定するプロパティ*/
+		margin: 0 auto;
+		margin-top: 6px;
 	}
 
 	/* mai-visual要素 */
